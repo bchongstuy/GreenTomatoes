@@ -5,9 +5,9 @@
 Our underlying container for Deque will be Linked Lists because most of their methods provide similar functionality as Deque methods. 
 
 # Instance Variables 
-⋅⋅*_size <br />
-⋅⋅*_front <br />
-⋅⋅*_end 
+⋅⋅* _size <br />
+⋅⋅* _front <br />
+⋅⋅* _end 
   
 # Deque Methods Priority List
   1.  addLast() / pollFirst()
