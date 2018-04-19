@@ -18,3 +18,9 @@ Our underlying container for Deque will be Linked Lists because most of their me
   5.
   
 # Plan
+  1. Create interface Deque and copy all methods from Priority List into interface
+  2. Create class QQKachoo
+  3. Write each method from Priority List one by one, left-most method first
+  4. Once compilable, use KtS and forge a variety of test cases to use in QQKachoo 
+  5. Add comments to clarify and beautify code
+  6. Voila!
