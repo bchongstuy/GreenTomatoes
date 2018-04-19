@@ -20,8 +20,8 @@ We are considering either the use of LLNode() or DLLNode(). Although our thought
   We chose to have implemenet offerLast() here because it wouldn't take too much time and the boolean could be helpful as we continue one. <br/> 
   Now we start the methods that make this queue a 'deque'
   4. addFirst() / pollLast() / peekLast() / offerFirst() <br/>
-  This lets us add to the front of the deque and remove from the end. Which basically starts making this double ended. Also peekLast() comes hand in hand with pollLast(). If we do add a isEmpty(), it will go on this line too. <br/>
-   With these methods, we have a basic 'deque' / double ended queue. Anything after is "extra" in the sense that we have not been working with them with our previous queues, but the methods could be helpful when using this data set. We may not be able to get to the methods below too.
+  This lets us add to the front of the deque and remove from the end. Which basically starts making this double ended. Also peekLast() comes hand in hand with pollLast(). If we do add a isEmpty(), it will go on this line too. <br/> <br/>
+   With these methods, we have a basic 'deque' / double ended queue. Anything after is "extra" in the sense that we have not been working with them with our previous queues, but the methods could be helpful when using this data set. We may not be able to get to the methods below too. <br/>
   5. contains() / remove() / get() 
   6. removeFirstOccurance() / removeLastOccurance() / iterator() 
   
