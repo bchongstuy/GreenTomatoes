@@ -8,11 +8,13 @@ public class QQKachoo<D> implements Deque<D> {
     private DLLNode<D> _front;
     private DLLNode<D> _end;
 
+    // default constructor creates an empty deque	
     public QQKachoo() {
 	_size = 0;
 	_front = _end = null;
-    }
+    }//end default constructor
 
+    //Adds an element to the end of the deque	
     //The way the DLLNodes point should not matter because they point in both directions anyways
     //DLLNode Constructor Order: ( Cargo , Previous, Next )
     public void addLast(D insert) {
@@ -32,8 +34,10 @@ public class QQKachoo<D> implements Deque<D> {
 	    _end = holder;
 	}
 	_size++; 
-    }
-    
+    }//end addLast()
+  
+    //Removes and returns the first element of deque
+    //Returns null if deque is empty.	
     public D pollFirst() {
 	if (_size == 0 ) {
 	    return null;
@@ -45,18 +49,19 @@ public class QQKachoo<D> implements Deque<D> {
 	    _size--;
 	    return holder;
 	}
-    }
-
+    }//end pollFirst()
+	
+    //Returns the first element of deque without removing
     public D peekFirst() {
          return _front.getCargo();
-    }
+    }//end peekFirst()
 
-    
+    //Returns the number of elements in Deque
     public int size() {
          return _size;
-    }
+    }//end size()
 
-
+    //Adds an element to the front of the deque
     public void addFirst(Card insert) {
 	if (_size == 0 ) {
 	    DLLNode<D> holder = new DLLNode<D>(insert, null , null);
@@ -74,9 +79,9 @@ public class QQKachoo<D> implements Deque<D> {
 	    _front = holder;
 	}
 	_size++; 
-    }	
+    }//end addFirst()	
 
-
+    //Removes and returns the last element of deque
     public Card pollLast() {
 	if (_size == 0 ) {
 	    return null;
@@ -88,16 +93,37 @@ public class QQKachoo<D> implements Deque<D> {
 	    _size--;
 	    return holder;
 	}
-    }
-    
+    }//end pollLast()
+
+    //Returns the last element of deque without removing
     public Card peekLast() {
          return _end.getValue();
-    }
-    
-        /*    
-    */
+    }//end peekLast()
     
     public static void main(String[] args) {
     }
+    	Deque<String> bub = new QQKachoo<String>();
+
+    	System.out.println( "Adding to deque...\n" )    
+    	bub.addFirst( "Kool Aid" );
+    	bub.addLast( "Caprisun" );
+    	bub.addFirst( "Lunchables" );
+    	bub.addLast( "Oreos" );
+   	bub.addFirst( "Snickers") ;
+    	bub.addLast( "Skittles" );
+
+    	System.out.println( "New Deque: " );
+    	System.out.println( bub );
+     
+    	System.out.println( "Size: " + bub.size() ); // 6
+    	System.out.println( "First Elem: " + bub.peekFirst() ); // Kool Aid
+    	System.out.println( "Last Elem: " + bub.peekLast() ); // Skittles
+
+    	System.out.println( "Remove First Elem: " + bub.pollFirst() ); // Kool Aid
+    	System.out.println( "Remove Last Elem: " + bub.pollLast() ); // Skittles
+    	System.out.println( "Remove Second Elem: " + bub.pollFirst() ); // Lunchables
+    	System.out.println( "Remove Fifth Elem: " + bub.pollLast() ); // Snickers
     
+    	System.out.println( "New Deque: " );
+    	System.out.println( bub );    
 }
