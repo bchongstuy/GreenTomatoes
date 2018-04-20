@@ -56,23 +56,45 @@ public class QQKachoo<D> implements Deque<D> {
          return _size;
     }
 
-    /*
-    
-    public boolean offerLast() {
-    }
-    
-    public void addFirst() {
-    }
-    
+
+    public void addFirst(Card insert) {
+	if (_size == 0 ) {
+	    DLLNode<D> holder = new DLLNode<D>(insert, null , null);
+	    _front = holder;
+	    _end = holder;
+	}
+	else if (_size == 1) {
+	    DLLNode<D> holder = new DLLNode<D>(insert, _end, null );
+	    _end.setNext(holder);
+	    _front = holder;
+	}
+	else {
+	    DLLNode<D> holder = new DLLNode<D>(insert, _front, null);
+	    _front.setNext(holder);
+	    _front = holder;
+	}
+	_size++; 
+    }	
+
+
     public Card pollLast() {
+	if (_size == 0 ) {
+	    return null;
+	}
+	else {
+	    D holder = _end.getCargo(); //Take the front cargo
+	    _end.getNext().setPrev(null); //Make the DLLNode behind it's front become null
+	    _end = _end.getNext(); //Make the DLLNode behind it the front
+	    _size--;
+	    return holder;
+	}
     }
     
     public Card peekLast() {
          return _end.getValue();
     }
     
-    public boolean offerFirst() {
-    }
+        /*    
     */
     
     public static void main(String[] args) {

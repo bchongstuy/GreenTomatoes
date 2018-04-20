@@ -13,17 +13,16 @@ public interface Deque<Card> {
 
     public int size();
 
-    /*
-    
-    public boolean offerLast();
-    
-    public void addFirst();
-    
+
+
+    public void addFirst(Card insert);  
+  
     public Card pollLast();
     
     public Card peekLast();
     
-    public boolean offerFirst();
+
+    /*
     */
     
 }//end interface Deque
