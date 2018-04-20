@@ -18,7 +18,7 @@ In addition, we will not be having a max capacity because we do not see a need f
   
 # New Methods List
  **( Chose not to do methods in 0. because they are unnecessary to our Deque class's functionality)** 
-  <br\> 0. offerLast() / contains() / remove() / get() / removeFirstOccurance() / removeLastOccurance() / iterator() 
+  </br> 0. offerLast() / contains() / remove() / get() / removeFirstOccurance() / removeLastOccurance() / iterator() 
   **============================================================================** 
   1.  addLast() <br/> 
   2.  pollFirst() <br/>
