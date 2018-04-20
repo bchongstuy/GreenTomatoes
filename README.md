@@ -16,24 +16,27 @@ In addition, we will not be having a max capacity because we do not see a need f
 - _front <br />
 - _end 
   
-# Deque Methods Priority List
-  1.  addLast() / pollFirst()
-  2.  peekFirst() / size() <br/>
-  These methods come first so we have a regular queue first. 
-  3.  offerLast()  <br/> (Chose not to do the offer() methods )
-  We chose to have implemenet offerLast() here because it wouldn't take too much time and the boolean could be helpful as we continue one. <br/> 
-  Now we start the methods that make this queue a 'deque'
-  </br>-----------------^^^^Currently finished up to^^^^----------------------------------------------------
-  4. addFirst() / pollLast() / peekLast()  <br/>
-  This lets us add to the front of the deque and remove from the end. Which basically starts making this double ended. Also peekLast() comes hand in hand with pollLast(). If we do add a isEmpty(), it will go on this line too. <br/> <br/>
+# New Methods List
+ **( Chose not to do methods in 0. because they are unnecessary to our Deque class's functionality)**
+  0. offerLast() / contains() / remove() / get() / removeFirstOccurance() / removeLastOccurance() / iterator() 
+  **============================================================================** <br\>
+  1.  addLast() <br/> 
+  2.  pollFirst() <br/>
+  3.  peekFirst() <br/>
+  4.  size() <br/>
+  These 4 methods come first so we have a regular queue first. 
+  **============================================================================** <br\>
+  5. addFirst()  <br/>
+  6. pollLast()  <br/>
+  7. peekLast()  <br/>
+  These methods let us add to the front of the deque and remove from the end. Which basically starts making this double ended. Also peekLast() comes hand in hand with pollLast(). If we do add a isEmpty(), it will go on this line too. <br/> <br/>
    With these methods, we have a basic 'deque' / double ended queue. Anything after is "extra" in the sense that we have not been working with them with our previous queues, but the methods could be helpful when using this data set. We may not be able to get to the methods below too. <br/>
-  5. contains() / remove() / get() 
-  6. removeFirstOccurance() / removeLastOccurance() / iterator() 
+  </br> **-----------------^^^^Finished!!!^^^^----------------------------------------------------**
   
 # Plan
-  1. Create interface Deque and copy all methods from Priority List into interface
+  ~~1. Create interface Deque and copy all methods from Priority List into interface
   2. Create class QQKachoo
   3. Write each method from Priority List one by one, left-most method first
   4. Once compilable, use KtS and forge a variety of test cases to use in QQKachoo 
-  5. Add comments to clarify and beautify code
+  5. Add comments to clarify and beautify code~~
   6. Voila!
