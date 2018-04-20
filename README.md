@@ -17,7 +17,7 @@ In addition, we will not be having a max capacity because we do not see a need f
 - _end 
   
 # New Methods List
- **( Chose not to do methods in 0. because they are unnecessary to our Deque class's functionality)**
+ **( Chose not to do methods in 0. because they are unnecessary to our Deque class's functionality)** <br\>
   0. offerLast() / contains() / remove() / get() / removeFirstOccurance() / removeLastOccurance() / iterator() 
   **============================================================================** <br\>
   1.  addLast() <br/> 
@@ -31,12 +31,12 @@ In addition, we will not be having a max capacity because we do not see a need f
   7. peekLast()  <br/>
   These methods let us add to the front of the deque and remove from the end. Which basically starts making this double ended. Also peekLast() comes hand in hand with pollLast(). If we do add a isEmpty(), it will go on this line too. <br/> <br/>
    With these methods, we have a basic 'deque' / double ended queue. Anything after is "extra" in the sense that we have not been working with them with our previous queues, but the methods could be helpful when using this data set. We may not be able to get to the methods below too. <br/>
-  </br> **-----------------^^^^Finished!!!^^^^----------------------------------------------------**
+   **-----------------^^^^Finished!!!^^^^----------------------------------------------------**
   
 # Plan
-  ~~1. Create interface Deque and copy all methods from Priority List into interface
-  2. Create class QQKachoo
-  3. Write each method from Priority List one by one, left-most method first
-  4. Once compilable, use KtS and forge a variety of test cases to use in QQKachoo 
-  5. Add comments to clarify and beautify code~~
+  1. ~~Create interface Deque and copy all methods from Priority List into interface~~
+  2. ~~Create class QQKachoo~~
+  3. ~~Write each method from Priority List one by one, left-most method first~~
+  4. ~~Once compilable, use KtS and forge a variety of test cases to use in QQKachoo ~~
+  5. ~~Add comments to clarify and beautify code~~
   6. Voila!
