@@ -7,6 +7,7 @@ We chose to use poll() and peek() instead of remove() and get() because the firs
 
 We are considering either the use of LLNode() or DLLNode(). Although our thought process isn't completely fleshed out for this right now, we believe that DLLNode() could let us keep constant runtime for the add() and poll() methods as we get use both get/setPrev() and get/setNext(). 
 
+Final decision: We're using DLLNodes
 # Instance Variables 
 - _size <br />
 - _front <br />
@@ -16,6 +17,7 @@ We are considering either the use of LLNode() or DLLNode(). Although our thought
   1.  addLast() / pollFirst()
   2.  peekFirst() / size() <br/>
   These methods come first so we have a regular queue first. 
+  -----------------^^^^Currently finished up to^^^^----------------------------------------------------
   3.  offerLast()  <br/> 
   We chose to have implemenet offerLast() here because it wouldn't take too much time and the boolean could be helpful as we continue one. <br/> 
   Now we start the methods that make this queue a 'deque'

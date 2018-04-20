@@ -5,13 +5,15 @@
 
 public interface Deque<Card> {
 
-    public void addLast();
-    
+    public void addLast(Card insert);
+
     public Card pollFirst();
     
     public Card peekFirst();
-    
+
     public int size();
+
+    /*
     
     public boolean offerLast();
     
@@ -22,5 +24,6 @@ public interface Deque<Card> {
     public Card peekLast();
     
     public boolean offerFirst();
+    */
     
 }//end interface Deque
