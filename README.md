@@ -7,28 +7,36 @@ We chose to use poll() and peek() instead of remove() and get() because the firs
 
 We are considering either the use of LLNode() or DLLNode(). Although our thought process isn't completely fleshed out for this right now, we believe that DLLNode() could let us keep constant runtime for the add() and poll() methods as we get use both get/setPrev() and get/setNext(). 
 
+Final decisions: We're using DLLNodes for our deque. This is because having access to the values on both sides of an element will let us have constant runtime poll() and add() methods. We can not limited in the way singly linked nodes are because instead of iterating through the nodes to find the value to the back of a node, we are able to just use getPrev(). If we had used singly linked nodes, we would have some linear run time methods. 
+</br>
+In addition, we will not be having a max capacity because we do not see a need for one. And as a result of that, we will not be including the offer() methods. As offer() will always return true due to our lack of a maximum capacity, we do not believe that it adds a lot of value to us. 
+
 # Instance Variables 
 - _size <br />
 - _front <br />
 - _end 
   
-# Deque Methods Priority List
-  1.  addLast() / pollFirst()
-  2.  peekFirst() / size() <br/>
-  These methods come first so we have a regular queue first. 
-  3.  offerLast()  <br/> 
-  We chose to have implemenet offerLast() here because it wouldn't take too much time and the boolean could be helpful as we continue one. <br/> 
-  Now we start the methods that make this queue a 'deque'
-  4. addFirst() / pollLast() / peekLast() / offerFirst() <br/>
-  This lets us add to the front of the deque and remove from the end. Which basically starts making this double ended. Also peekLast() comes hand in hand with pollLast(). If we do add a isEmpty(), it will go on this line too. <br/> <br/>
+# New Methods List
+ **(Chose not to do methods in 0. because they are unnecessary to our Deque class's functionality)** 
+  </br> 0. offerLast() / contains() / remove() / get() / removeFirstOccurance() / removeLastOccurance() / iterator() 
+  **============================================================================** 
+  1.  addLast() <br/> 
+  2.  pollFirst() <br/>
+  3.  peekFirst() <br/>
+  4.  size() <br/>
+  These 4 methods come first so we have a regular queue first. 
+  **============================================================================** 
+  5. addFirst()  <br/>
+  6. pollLast()  <br/>
+  7. peekLast()  <br/>
+  These methods let us add to the front of the deque and remove from the end. Which basically starts making this double ended. Also peekLast() comes hand in hand with pollLast(). If we do add a isEmpty(), it will go on this line too. <br/> <br/>
    With these methods, we have a basic 'deque' / double ended queue. Anything after is "extra" in the sense that we have not been working with them with our previous queues, but the methods could be helpful when using this data set. We may not be able to get to the methods below too. <br/>
-  5. contains() / remove() / get() 
-  6. removeFirstOccurance() / removeLastOccurance() / iterator() 
+   **---------------------------------------^^^^Finished!!!^^^^----------------------------------------------------**
   
 # Plan
-  1. Create interface Deque and copy all methods from Priority List into interface
-  2. Create class QQKachoo
-  3. Write each method from Priority List one by one, left-most method first
-  4. Once compilable, use KtS and forge a variety of test cases to use in QQKachoo 
-  5. Add comments to clarify and beautify code
+  1. ~~Create interface Deque and copy all methods from Priority List into interface~~
+  2. ~~Create class QQKachoo~~
+  3. ~~Write each method from Priority List one by one, left-most method first~~
+  4. ~~Once compilable, use KtS and forge a variety of test cases to use in QQKachoo~~
+  5. ~~Add comments to clarify and beautify code~~
   6. Voila!
