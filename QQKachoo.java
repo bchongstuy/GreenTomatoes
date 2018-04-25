@@ -126,7 +126,7 @@ public class QQKachoo<D> implements Deque<D> {
 
   public static void main(String[] args) {
 
-    Deque<String> bub = new QQKachoo<String>();
+    QQKachoo<String> bub = new QQKachoo<String>();
 
     System.out.println( "Adding to deque...\n" );
     bub.addFirst( "KoolAid" );
