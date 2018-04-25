@@ -42,6 +42,12 @@ public class QQKachoo<D> implements Deque<D> {
     if (_size == 0 ) {
       return null;
     }
+    else if (_size == 1) {
+      D holder = _front.getCargo();
+      _size = 0;
+      _front = _end = null;
+      return holder;
+    }
     else {
       D holder = _front.getCargo(); //Take the front cargo
       _front.getPrev().setNext(null); //Make the DLLNode behind it's front become null
@@ -86,6 +92,12 @@ public class QQKachoo<D> implements Deque<D> {
     if (_size == 0 ) {
       return null;
     }
+    else if (_size == 1) {
+      D holder = _front.getCargo();
+      _size = 0;
+      _front = _end = null;
+      return holder;
+    }
     else {
       D holder = _end.getCargo(); //Take the front cargo
       _end.getNext().setPrev(null); //Make the DLLNode behind it's front become null
@@ -117,7 +129,7 @@ public class QQKachoo<D> implements Deque<D> {
     Deque<String> bub = new QQKachoo<String>();
 
     System.out.println( "Adding to deque...\n" );
-    bub.addFirst( "Kool Aid" );
+    bub.addFirst( "KoolAid" );
     bub.addLast( "Caprisun" );
     bub.addFirst( "Lunchables" );
     bub.addLast( "Oreos" );
@@ -140,6 +152,11 @@ public class QQKachoo<D> implements Deque<D> {
 
     System.out.println( "New Deque: " );
     System.out.println( bub );
+
+    System.out.println( "Removing the last two items...");
+    System.out.println( "Remove First ElemL " + bub.pollFirst() );
+    System.out.println( "Remove Last Elem: " + bub.pollLast() );
+    System.out.println( "Is it empty? " + (bub.size() == 0));
 
   } // end main method
 
