@@ -40,3 +40,8 @@ In addition, we will not be having a max capacity because we do not see a need f
   4. ~~Once compilable, use KtS and forge a variety of test cases to use in QQKachoo~~
   5. ~~Add comments to clarify and beautify code~~
   6. Voila!
+
+# New Additions
+ - Contains DequeTester and DequeTester2
+ - Fixed methods in QQKachoo
+ - Fix white-spacing in interface Deque
